@@ -6,6 +6,7 @@ import connectDb from "./db/connect.js";
 import authRouter from "./routes/authRoute.js";
 import jobsRouter from "./routes/jobsRoutes.js";
 import "express-async-errors";
+//rerun
 
 dotenv.config();
 const app = express();
@@ -13,7 +14,7 @@ const app = express();
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Welcome ......");
+  res.json({ msg: "Welcome ......" });
 });
 
 app.use("/api/v1/auth", authRouter);
